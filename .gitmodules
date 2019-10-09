@@ -1,0 +1,12 @@
+[submodule "ubuntu-18.04/packaging-derecho/work/derecho-0.9"]
+	path = ubuntu-18.04/packaging-derecho/work/derecho-0.9
+	url = https://github.com/derecho-project/derecho
+[submodule "ubuntu-18.04/packaging-mutils/work/mutils-0.9"]
+	path = ubuntu-18.04/packaging-mutils/work/mutils-0.9
+	url = https://github.com/mpmilano/mutils
+[submodule "ubuntu-18.04/packaging-mutils-tasks/work/mutils-tasks-0.9"]
+	path = ubuntu-18.04/packaging-mutils-tasks/work/mutils-tasks-0.9
+	url = https://github.com/mpmilano/mutils-tasks
+[submodule "ubuntu-18.04/packaging-mutils-containers/work/mutils-containers-0.9"]
+	path = ubuntu-18.04/packaging-mutils-containers/work/mutils-containers-0.9
+	url = https://github.com/mpmilano/mutils-containers
