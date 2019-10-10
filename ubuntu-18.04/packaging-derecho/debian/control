@@ -2,14 +2,14 @@ Source: derecho
 Section: libs
 Priority: optional
 Maintainer: Matthew Milano <milano@cs.cornell.edu>
-Build-Depends: cmake, debhelper (>=9), javahelper, librdmacm-dev, libibverbs-dev, spdlog, mutils, mutils-containers, mutils-tasks, libfabric-dev (>1.6), g++ (>=7.4)
+Build-Depends: cmake, debhelper (>=9), javahelper, librdmacm-dev, libibverbs-dev, spdlog, mutils, mutils-containers, mutils-tasks, libfabric-dev (>=1.6), g++ (>=7.4)
 Standards-Version: 3.9.8
-Homepage: <insert the upstream URL, if relevant>
+Homepage: https://github.com/Derecho-Project/derecho
 
 Package: derecho
-Architecture: any
-Multi-Arch: foreign
-Depends: ${misc:Depends}, ${shlibs:Depends}, librdmacm-dev, libibverbs-dev, spdlog, mutils, mutils-containers, mutils-tasks, libfabric-dev (>1.6)
+Architecture: amd64
+Multi-Arch: same
+Depends: ${misc:Depends}, ${shlibs:Depends}, librdmacm-dev, libibverbs-dev, spdlog, mutils, mutils-containers, mutils-tasks, libfabric-dev (>=1.6)
 Description: State-machine replicationg and RPC over RDMA
  Derecho is a library that helps you build replicated, fault-tolerant
  services in a datacenter with RDMA networking.
