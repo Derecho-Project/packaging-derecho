@@ -1,7 +1,7 @@
 Source: mutils-tasks
 Section: unknown
 Priority: extra
-Maintainer: Matthew Milano <xlnagla@localhost>
+Maintainer: Matthew Milano <milano@cs.cornell.edu>
 Build-Depends: cmake, debhelper (>=9)
 Standards-Version: 3.9.8
 Homepage: <insert the upstream URL, if relevant>
