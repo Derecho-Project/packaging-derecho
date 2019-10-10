@@ -9,7 +9,7 @@ Homepage: <insert the upstream URL, if relevant>
 Package: derecho
 Architecture: any
 Multi-Arch: foreign
-Depends: ${misc:Depends}, ${shlibs:Depends} librdmacm-dev, libibverbs-dev, spdlog, mutils, mutils-containers, mutils-tasks, libfabric-dev (>1.6), g++ (>=7.4)
+Depends: ${misc:Depends}, ${shlibs:Depends}, librdmacm-dev, libibverbs-dev, spdlog, mutils, mutils-containers, mutils-tasks, libfabric-dev (>1.6)
 Description: State-machine replicationg and RPC over RDMA
  Derecho is a library that helps you build replicated, fault-tolerant
  services in a datacenter with RDMA networking.
