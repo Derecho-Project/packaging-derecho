@@ -1,0 +1,5 @@
+spdlog (1.2.1-1) UNRELEASED; urgency=low
+
+  * Initial release.
+
+ -- Matthew Milano <milano@cs.cornell.edu>  Wed, 09 Oct 2019 09:50:05 -0400
