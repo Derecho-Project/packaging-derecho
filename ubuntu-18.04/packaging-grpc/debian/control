@@ -1,0 +1,14 @@
+Source: grpc
+Section: libs
+Priority: optional
+Maintainer: Matthew Milano <milano@cs.cornell.edu>
+Build-Depends: cmake, debhelper (>=9), libgflags-dev, libgtest-dev, clang-5.0, libc++-dev, build-essential, autoconf, libtool, pkg-config
+Standards-Version: 3.9.8
+Homepage: https://grpc.io/
+
+Package: mutils
+Architecture: amd64
+Multi-Arch: same
+Depends: ${misc:Depends}, ${shlibs:Depends}, libgflags-dev, libgtest-dev, clang-5.0, libc++-dev, build-essential, autoconf, libtool, pkg-config
+Description: The C based gRPC (C++, Python, Ruby, Objective-C, PHP, C#)
+ Need I say more

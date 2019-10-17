@@ -1,0 +1,15 @@
+Source: demo-dependencies
+Section: libs
+Priority: optional
+Maintainer: Matthew Milano <milano@cs.cornell.edu>
+Build-Depends: libgflags-dev, libgtest-dev, clang-5.0, libc++-dev, build-essential, autoconf, libtool, pkg-config
+Standards-Version: 3.9.8
+Homepage: https://github.com/Derecho-Project/sospdemo
+
+Package: demo-dependencies
+Architecture: amd64
+Multi-Arch: same
+Depends: libgflags-dev, libgtest-dev, clang-5.0, libc++-dev, build-essential, autoconf, libtool, pkg-config
+Description: Dependencies for our SOSP demo
+ Install this package to pull in
+ all the dependencies you'll need

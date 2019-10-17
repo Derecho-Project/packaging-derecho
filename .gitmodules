@@ -10,3 +10,6 @@
 [submodule "ubuntu-18.04/packaging-mutils-containers/work/mutils-containers-0.9"]
 	path = ubuntu-18.04/packaging-mutils-containers/work/mutils-containers-0.9
 	url = https://github.com/mpmilano/mutils-containers
+[submodule "ubuntu-18.04/packaging-grpc/work/grpc"]
+	path = ubuntu-18.04/packaging-grpc/work/grpc-1.24.2
+	url = https://github.com/grpc/grpc
