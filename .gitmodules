@@ -13,3 +13,6 @@
 [submodule "ubuntu-18.04/packaging-grpc/work/grpc"]
 	path = ubuntu-18.04/packaging-grpc/work/grpc-1.24.2
 	url = https://github.com/grpc/grpc
+[submodule "ubuntu-18.04/packaging-mxnet/work/mxnet-1.5.1"]
+	path = ubuntu-18.04/packaging-mxnet/work/mxnet-1.5.1
+	url = https://github.com/apache/incubator-mxnet.git
