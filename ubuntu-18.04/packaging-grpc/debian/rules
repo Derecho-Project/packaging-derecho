@@ -4,6 +4,7 @@
 #export DEB_BUILD_MAINT_OPTIONS = hardening=+all
 #export DEB_CFLAGS_MAINT_APPEND  = -Wall -pedantic
 #export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
+export TMPDIR=$(shell (mkdir -p debian/tmp/usr; pwd))/debian/tmp/usr/
 
 %:
 	dh $@  

@@ -1,4 +1,4 @@
-mutils for Debian
+grpc for Debian
 
 This package is an experimental build based on the github source.  It should not be considered safe for general use, and has not been widely tested.  The preferred way to use this library remains building it from source.
 
