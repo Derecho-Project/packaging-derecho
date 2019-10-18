@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -eu
+
+package_name_withver=$1
+tmpdir=$2
+installdir=$tmpdir/$package_name_withver/debian/tmp/usr
+
+echo $installdir
+
+sed s%'prefix ?= /usr/local'%'prefix ?= '$installdir% -i Makefile
+sed s%'test: test_c test_cxx'%'test:'% -i Makefile

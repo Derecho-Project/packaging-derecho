@@ -11,13 +11,14 @@ function cleanup {
 trap cleanup EXIT
 
 function ensure_dir_correct {
-    if [[ -d debian && -d work && `ls | wc -w` -eq 2 ]]; then
+    if [[ -d debian && -d work && ( -f tweaks && `ls | wc -w` -eq 3 || `ls | wc -w` -eq 2)  ]]; then
 	echo "Working directory `pwd` detected as compliant"
 	local current_dir_name=`pwd | rev | cut -d/  -f1 | rev`
 	if echo $current_dir_name | grep -q packaging-; then
 	    local project_name=`echo $current_dir_name | sed s/"packaging-"//g`
 	    if [[ `echo work/$project_name*/ | wc -w` -eq 1 ]]; then
 		original_dir_full=`pwd`
+		tweaks_full="$original_dir_full"/tweaks
 		current_dir_name=`pwd | rev | cut -d/  -f1 | rev`
 		project_name=`echo $current_dir_name | sed s/"packaging-"//g`
 		package_dir_relative=`echo work/$project_name*/ | sed s/work// | tr -d /`

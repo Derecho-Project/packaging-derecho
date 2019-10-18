@@ -17,6 +17,12 @@ set -eu
     if [[ $? -eq 0 ]]; then
 	enter_tmpdir
 	cp -rfp $workdir_full/* $tmpdir_full
+	if [[ -e $tweaks_full ]]; then
+	    (
+		cd $tmpdir_full/$package_dir_relative;
+		$tweaks_full $package_dir_relative $tmpdir_full
+	    )
+	fi
 	tar -czf "$package_dir_relative".tar.gz $package_dir_relative
 	cd $package_dir_relative
 	debmake
