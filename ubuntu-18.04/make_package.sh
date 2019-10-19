@@ -4,7 +4,7 @@ set -eu
 
 #check if we're in the right working directory
 
-
+#skip_debuild=$1
 
 (
     set -eu
@@ -27,8 +27,13 @@ set -eu
 	cd $package_dir_relative
 	debmake
 	yes | cp -r $debian_dir_full/* debian/
-	debuild
-	cp ../*.deb $original_dir_full
+	if [[ $# -ge 2 ]]; then
+	    echo "Skipping debuild...."
+	else
+	    echo "About to run debuild!"
+	    debuild
+	    cp ../*.deb $original_dir_full
+	fi
 	exit 0
     else
 	exit 1
