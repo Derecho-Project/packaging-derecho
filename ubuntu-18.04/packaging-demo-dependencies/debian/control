@@ -2,7 +2,7 @@ Source: demo-dependencies
 Section: libs
 Priority: optional
 Maintainer: Matthew Milano <milano@cs.cornell.edu>
-Build-Depends: libgflags-dev, libgtest-dev, clang-5.0, libc++-dev, build-essential, autoconf, libtool, pkg-config
+Build-Depends: libgflags-dev, libgtest-dev, clang (>=5.0), libc++-dev, build-essential, autoconf, libtool, pkg-config
 Standards-Version: 3.9.8
 Homepage: https://github.com/Derecho-Project/sospdemo
 
