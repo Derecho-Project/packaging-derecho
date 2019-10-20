@@ -10,6 +10,6 @@ export CLASSPATH=/usr/share/java/csv.jar:/usr/share/java/debug-disable.jar:/usr/
 %:
 	dh $@ --with javahelper 
 
-#override_dh_auto_configure:
-#	dh_auto_configure -- \
-#	      -DCMAKE_LIBRARY_ARCHITECTURE="$(DEB_TARGET_MULTIARCH)"
+override_dh_auto_configure:
+	dh_auto_configure -- \
+	      -DCMAKE_BUILD_TYPE=Relwithdebinfo

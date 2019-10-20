@@ -16,3 +16,6 @@
 [submodule "ubuntu-18.04/packaging-mxnet/work/mxnet-1.5.1"]
 	path = ubuntu-18.04/packaging-mxnet/work/mxnet-1.5.1
 	url = https://github.com/apache/incubator-mxnet.git
+[submodule "ubuntu-18.04/packaging-libfabrics/work/libfabrics-1.7.0"]
+	path = ubuntu-18.04/packaging-libfabrics/work/libfabrics-1.7.0
+	url = https://github.com/ofiwg/libfabric.git

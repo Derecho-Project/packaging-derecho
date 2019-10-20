@@ -1,0 +1,16 @@
+Source: libfabrics
+Section: libs
+Priority: optional
+Maintainer: Matthew Milano <milano@cs.cornell.edu>
+Build-Depends: cmake, debhelper (>=9), librdmacm-dev, libibverbs-dev
+Standards-Version: 3.9.8
+Homepage: https://github.com/Derecho-Project/libfabrics
+
+Package: libfabrics
+Architecture: amd64
+Multi-Arch: same
+Depends: ${misc:Depends}, ${shlibs:Depends}, librdmacm-dev, libibverbs-dev
+conflicts: libfabric-dev, libfabric1, libfabric-bin
+Description: State-machine replicationg and RPC over RDMA
+ Derecho is a library that helps you build replicated, fault-tolerant
+ services in a datacenter with RDMA networking.
