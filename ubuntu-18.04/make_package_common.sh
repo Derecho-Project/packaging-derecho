@@ -38,7 +38,7 @@ function ensure_dir_correct {
 }
 
 function enter_tmpdir {
-    tmpdir_full=`mktemp -p /gentoo/tmp/ -d`
+    tmpdir_full=`mktemp -d`
     cd $tmpdir_full
     echo $tmpdir_full
 }
