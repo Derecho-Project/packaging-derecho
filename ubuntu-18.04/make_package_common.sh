@@ -4,7 +4,7 @@ tmpdir_full=""
 function cleanup {
     if [[ -d $tmpdir_full ]]; then 
 	echo "Removing $tmpdir_full"
-	#rm  -r /tmp/foo
+	rm -r $tmpdir_full
     fi
 }
 
