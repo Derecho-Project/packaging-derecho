@@ -1,15 +1,36 @@
 #!/usr/bin/make -f
-# You must remove unused comment lines for the released package.
-#export DH_VERBOSE = 1
-#export DEB_BUILD_MAINT_OPTIONS = hardening=+all
-#export DEB_CFLAGS_MAINT_APPEND  = -Wall -pedantic
-#export DEB_LDFLAGS_MAINT_APPEND = -Wl,--as-needed
-#export JAVA_HOME=/usr/lib/jvm/default-java
-#export CLASSPATH=/usr/share/java/csv.jar:/usr/share/java/debug-disable.jar:/usr/share/java/itext.jar
+
+include /usr/share/dpkg/architecture.mk
+include /usr/share/dpkg/buildflags.mk
+include /usr/share/dpkg/pkg-info.mk
+
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+EXTRAFLAGS :=
+ifeq (amd64,$(DEB_HOST_ARCH))
+EXTRAFLAGS := --enable-psm2=yes
+endif
+
+configure_providers = \
+	--enable-psm=yes \
+	--enable-sockets=yes \
+	--enable-verbs=yes \
+	--enable-usnic=no \
+	--enable-mlx=no \
+	--enable-gni=no \
+	--enable-udp=yes \
+	--enable-rxm=yes \
+	--enable-rxd=yes \
+	--enable-bgq=no \
+	$(EXTRAFLAGS)
 
 %:
-	dh $@ 
+	dh $@
 
-#override_dh_auto_configure:
-#	dh_auto_configure -- \
-#	      -DCMAKE_BUILD_TYPE=Relwithdebinfo
+override_dh_auto_configure:
+	dh_auto_configure -- $(configure_providers)
+
+override_dh_missing:
+	find debian/tmp -name libfabric.la -delete
+	dh_missing --fail-missing
+

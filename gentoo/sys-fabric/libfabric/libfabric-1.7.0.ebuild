@@ -1,8 +1,5 @@
 EAPI=7
-#EGIT_REPO_URI="https://github.com/ofiwg/libfabric.git"
-#EGIT_COMMIT="v${PV}"
 SRC_URI="https://github.com/ofiwg/libfabric/archive/v${PV}.tar.gz"
-#inherit git-r3
 inherit autotools 
 DESCRIPTION="Open Fabric Interfaces"
 HOMEPAGE="http://libfabric.org/"
